@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+  li a {
+
+color: rgb(233, 227, 227);
+font-size: larger;
+text-align: center;
+text-decoration: none;
+}
+</style>
+<body>
+    
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div>
+          <img class="img-fluid" src="https://i.pinimg.com/474x/be/d9/fe/bed9fecd531f48aff4ad15598d0a0585.jpg" style="width: 50%; height: 50%; border-radius: 50%;" class=" rounded">
+        </div>
+      
+        <ul class="navbar-nav ml-auto" style="margin-right: 10%;">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}"style="margin-right: 50px;">
+                 HOME
+                </a>
+            </li>
+            <li class="nav-item" style="margin-right: 50px;">
+              <a class="nav-link" href="{% url 'aboutpage' %}">
+                ABOUT
+              </a>
+          </li>
+            <li class="nav-item" style="margin-right: 50px;">
+                <a class="nav-link" href="{% url 'jobs' %}">
+                  JOBS
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'jobfair' %}" style="margin-right: 50px;">
+                  JOB FAIRS
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"  data-toggle="modal" data-target="#exampleModalCenter" style="margin-right: 50px;">
+                LOGIN
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="margin-right: 50px;" data-toggle="modal" data-target="#exampleModalCenter1" >
+              REGISTER
+            </a>
+        </li>
+        </ul>
+    </nav>
+    <div class="main-wrapper" style="padding-top: 15px; background-color: rgb(107, 110, 107);">
+         
+      
+        <div class="second-search-result-wrapper">
+           <div class="container">
+              <form>
+                 <div class="second-search-result-inner"> 
+                    <div class="row">
+                       <div class="col-md-5">
+                          <div class="form-group form-lg">
+                             <input class="form-control" name="keywords" placeholder="keywords. Ex: Software Developer" type="text" value="">
+                          </div>
+                       </div>
+                       <div class="col-md-3">
+                          <div class="form-group form-lg">
+                             <input class="form-control" name="location"  placeholder="Location. Ex: kochi" type="text" value="">
+                          </div>
+                       </div>  
+                        <div class="col-md-2">
+                          <div class="form-group form-lg">
+                             <select class="form-control" name="jobTypeName">
+                                <option value="">Job Type </option>
+                                
+                                   <option value="Contract" >Contract</option>
+                                
+                                   <option value="Internship" >Internship</option>
+                                
+                                   <option value="Overseas" >Overseas</option>
+                                
+                                   <option value="Permanent" >Permanent</option>
+                                
+                                   <option value="Temporary" >Temporary</option>
+                                
+                             </select>
+                          </div>
+                       </div>
+                       <div class="col-xss-12 col-xs-6 col-sm-4 col-md-2">
+                          <button type="button" class="btn btn-dark">Search</button>
+                       </div>
+                    </div>
+                 </div>
+              </form> 
+           </div>
+        </div>
+    </div>
+           <div class="card" style="width: 40%; margin-top: 4%; margin-left: 10%; background-color: gray;">
+            <img class="card-img-top" src="https://media.licdn.com/dms/image/C4E0BAQEUlswXcrD_JQ/company-logo_200_200/0/1676527378398?e=2147483647&v=beta&t=TiC_oVk74mGiuzwKj-PQhg4shEvYtSMwO9J--Fln4z0" alt="Card image cap" style="width: 50px; height: 50px; padding-left: 10px; padding-top: 10px;">
+            <div class="card-body">
+              <h5 class="card-title">Full Stack Web Developer-<a href="" style="color: black;">Educine Cyber Service</a></h5>
+              <div>
+              <p class="card-text">Job Code : JC20235408</p>
+              <p class="card-text">Experience: 0-2 years</p>
+              <p class="card-text">Salary :  12000 - 18000 / Month</p>
+              <p class="card-text">Last Date: 15 May 2023</p>
+              <p class="card-text">Posted: 16 days ago</p>
+
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal1">apply for job</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="width: 40%; margin-top: 4%; margin-left: 10%; background-color: gray;">
+         <img class="card-img-top" src="https://media.licdn.com/dms/image/C510BAQHaSiS_Btt4Xg/company-logo_200_200/0/1571738254361?e=2147483647&v=beta&t=ySHHQAMNdjUUEsj00G_o1n8qTwujtnvxEf66cgYMeNA" alt="Card image cap" style="width: 50px; height: 50px; padding-left: 10px; padding-top: 10px;">
+         <div class="card-body">
+           <h5 class="card-title">Jnior Software Engineer(JAVA)-<a href="" style="color: black;">Quest Innovative Solutions</a></h5>
+           <div>
+           <p class="card-text">Job Code : JC20656757</p>
+           <p class="card-text">Experience: 1-2 years</p>
+           <p class="card-text">Salary :  10000 - 20000 / Month</p>
+           <p class="card-text">Last Date: 13 May 2023</p>
+           <p class="card-text">Posted: 10 days ago</p>
+
+           <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal2">apply for job</a>
+           </div>
+         </div>
+       </div>
+       <div class="card" style="width: 40%; margin-top: 4%; margin-left: 10%; background-color: gray;">
+        <img class="card-img-top" src="https://www.webdesigncochin.in/wp-content/uploads/2018/01/welcom-img.jpg" alt="Card image cap" style="width: 50px; height: 50px; padding-left: 10px; padding-top: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Python Developer-<a href="" style="color: black;">WebDesignCochin.in</a></h5>
+          <div>
+          <p class="card-text">Job Code : JC542356757</p>
+          <p class="card-text">Experience: 2-5 years</p>
+          <p class="card-text">Salary :  30000 - 40000 / Month</p>
+          <p class="card-text">Last Date: 19 May 2023</p>
+          <p class="card-text">Posted: 5 days ago</p>
+
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal3">apply for job</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 40%; margin-top: 4%; margin-left: 10%; background-color: gray;">
+        <img class="card-img-top" src="data:image/png;base64,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" alt="Card image cap" style="width: 50px; height: 50px; padding-left: 10px; padding-top: 10px;">
+        <div class="card-body">
+          <h5 class="card-title">Flutter Developer-<a href="" style="color: black;">Cloudium Software</a></h5>
+          <div>
+          <p class="card-text">Job Code : JC54326757</p>
+          <p class="card-text">Experience: 0-1 years</p>
+          <p class="card-text">Salary :  15000 - 25000 / Month</p>
+          <p class="card-text">Last Date: 13 May 2023</p>
+          <p class="card-text">Posted: 15 days ago</p>
+
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal4">apply for job</a>
+          </div>
+        </div>
+
+        
+
+      </div> <br><br> <br><br> <br><br>
+
+
+
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Full Stack Developer</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <p>Company Name  : Educine Cyber Service</p>
+             <input type="text" class="form-control" placeholder="Enter your Qualification"><br>
+             <input type="text" class="form-control" placeholder="Current Place"><br>
+             <input type="text" class="form-control" placeholder="work experience"><br>
+             <label>Are you sure to confirm ?  </label>
+             <input type="radio" name='check' value="yes">yes
+             <input type="radio" name='check' value="no">No
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Junior Software Engineer(JAVA)</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <p>Company Name  : Quest Innovative Solution</p>
+             <input type="text" class="form-control" placeholder="Enter your Qualification"><br>
+             <input type="text" class="form-control" placeholder="Current Place"><br>
+             <input type="text" class="form-control" placeholder="work experience"><br>
+             <label>Are you sure to confirm ?  </label>
+             <input type="radio" name='check' value="yes">yes
+             <input type="radio" name='check' value="no">No
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Python Developer</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <p>Company Name  : WebDesignCochin.in</p>
+             <input type="text" class="form-control" placeholder="Enter your Qualification"><br>
+             <input type="text" class="form-control" placeholder="Current Place"><br>
+             <input type="text" class="form-control" placeholder="work experience"><br>
+             <label>Are you sure to confirm ?  </label>
+             <input type="radio" name='check' value="yes">yes
+             <input type="radio" name='check' value="no">No
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Flutter Developer</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <p>Company Name  : Cloudium Software</p>
+             <input type="text" class="form-control" placeholder="Enter your Qualification"><br>
+             <input type="text" class="form-control" placeholder="Current Place"><br>
+             <input type="text" class="form-control" placeholder="work experience"><br>
+             <label>Are you sure to confirm ?  </label>
+             <input type="radio" name='check' value="yes">yes
+             <input type="radio" name='check' value="no">No
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="footer-middle" style="background-color: black;"> 
+        <div class="container">
+          <div class="row">
+                                                                  <div class="col-sm-12 col-md-6 col-lg-3 ">
+                  <div id="about_us-widget-9" class="widget about_us">			<!-- About Widget -->
+    <div class="about-footer">
+      <div class="footer-widget address">
+        <div class="footer-logo">
+                                      </div>
+        <div class="footer-address">
+                                                  </div>
+      </div>
+    </div>	
+
+  </div><div id="about_us-widget-5" class="widget about_us">			<!-- About Widget -->
+    <div class="about-footer">
+      <div class="footer-widget address">
+        <div class="footer-logo">
+            <img src="https://i.pinimg.com/474x/be/d9/fe/bed9fecd531f48aff4ad15598d0a0585.jpg"  alt="" style="padding-top: 30px; border-radius: 50%;">    
+                            
+            
+                      </div>
+
+      </div>
+    </div>	
+
+  </div><div id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-social-menu-container"><ul id="menu-social-menu" class="menu">
+</ul></div></div>										</div>
+                
+                                                                    <div class="col-sm-12 col-md-6 col-lg-3 ">
+                  <div id="nav_menu-2" class="widget widget_nav_menu"><h2 class="widget-title">Quick Links</h2><div class="menu-our-company-container"><ul id="menu-our-company" class="menu"><li id="menu-item-423" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-423"><a href="#"  style="color: whitesmoke;">About</a></li>
+<li id="menu-item-424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-424"><a href="#" style="color: whitesmoke;">Contact</a></li>
+<li id="menu-item-425" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-425"><a href="#"  style="color: whitesmoke;">Gallery</a></li>
+<li id="menu-item-426" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-426"><a href="#"  style="color: whitesmoke;">News</a></li>
+<li id="menu-item-427" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-427"><a href="#"  style="color: whitesmoke;">Employability Centre</a></li>
+</ul></div></div>										</div>
+                
+                                                                    <div class="col-sm-12 col-md-6 col-lg-3 ">
+                  <div id="about_us-widget-3" class="widget about_us"><h2 class="widget-title">Contact Us</h2>			<!-- About Widget -->
+    <div class="about-footer">
+      <div class="footer-widget address">
+        <div class="footer-logo">
+                            
+                      </div>
+        <div class="footer-address">
+                        <div class="footer_s_inner"> 
+            <div class="footer-sociala-icon">
+              <i class="fa fa-home"></i>
+            </div>									
+            <div class="footer-sociala-info">				
+            </div> 
+          </div> 
+                                      <div class="footer_s_inner"> 
+            <div class="footer-sociala-icon">
+              <i class="fa fa-phone"></i>
+            </div> 									
+            <div class="footer-sociala-info">   
+                <p  style="color: whitesmoke;">Telephone :  +61 2 8376 6284</p>
+            </div>
+          </div>
+                                    
+            <div class="footer_s_inner"> 
+              <div class="footer-sociala-icon"> 
+                <i class="fa fa-globe"></i>
+              </div> 
+              <div class="footer-sociala-info">  
+                <p  style="color: whitesmoke;">Email:mail@example.com</p>									
+              </div>
+            </div>
+                      </div>
+      </div>
+    </div>	
+
+  </div>										</div>
+                
+                                                                    <div class="col-sm-12 col-md-6 col-lg-3 last">
+                  <div id="about_us-widget-6" class="widget about_us">		<!-- About Widget -->
+    <div class="about-footer">
+      <div class="footer-widget address">
+        <div class="footer-logo">
+                            
+            <p style="padding-top: 20px; color: aliceblue; text-align: justify;">Job portals, or job boards, are sites where you can advertise jobs and search for resumes. They are an integral part of almost every hiring process and using them effectively will translate into qualified candidates for relatively low costs.</p>
+                      </div>
+        <div class="footer-address">
+                                                  </div>
+      </div>
+    </div>	
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered" role="document" style="width: 100%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <form>
+            <label>Username</label>
+            <input type="text" placeholder="username" class="form-control">
+            <label>Password
+            </label>
+            <input type="password" placeholder="password" class="form-control"><br>
+            <button type="submit" class="btn btn-primary">Login</button>
+    
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+           </form>
+          </div>
+      </div>
+    </div>
+          
+
+          <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered" role="document" style="width: 100%;">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="text-align: center; margin-left: 25%; font-size: larger;color: rgb(17, 17, 17);" id="exampleModalLongTitle"><b>REGISTRATION FORM</b></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                 <form>
+                  <select class="form-control">
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                    <option>Mrs.</option>
+                  </select>
+                  <label>Full Name</label>
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                  <label>Qualification</label>
+                  <select class="form-control">
+                    <option>SSLC</option>
+                    <option>Plus Two</option>
+                    <option>Degree</option>
+                    <option>Diploma</option>
+                    <option>PG</option>
+                  </select>
+                  <label>Mobile Number</label>
+                  <input type="number" placeholder="mobile number" class="form-control">
+                  <label>Email_ID</label>
+                  <input type="email" placeholder="enter your email" class="form-control">
+                  <label>Password
+                  </label>
+                  <input type="password" placeholder="password" class="form-control"><br>
+                  <button type="submit" class="btn btn-success">Register</button>
+          
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                 </form>
+                </div>
+                
+
+
+        </div>
+      </div>
+    </div>
+</body>
+</html>
